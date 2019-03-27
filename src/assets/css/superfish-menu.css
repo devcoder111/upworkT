@@ -1,0 +1,185 @@
+/* Main menu styles
+========================================================*/
+nav {
+  margin: 0;
+  padding: 0;
+  background: #dc5e61;
+  border-bottom: 1px solid #df797b;
+  height: 70px;
+}
+.sf-menu {
+  z-index: 990;
+  position: relative;
+  float: none;
+  text-align: center;
+}
+.sf-menu > li {
+  display: inline-block;
+  float: left;
+  width: 19.9%;
+  min-height: 70px;
+  position: relative;
+  text-transform: uppercase;
+}
+.sf-menu > li + li {
+  border-left: 1px solid #df797b;
+  margin-left: -1px;
+}
+.sf-menu > li > a {
+  display: block;
+  background: #dc5e61;
+  text-align: center;
+  position: relative;
+  color: #eae6e3;
+  font: 400 14px/70px 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.3px;
+  padding: 0;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+.sf-menu > li > a:hover {
+  background: #eae6e3;
+  color: #dc5e61;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+.sf-menu > li.current a {
+  color: #dc5e61;
+  background: #eae6e3;
+}
+.sf-menu > li > a.sf-with-ul:after {
+  position: absolute;
+  content: '';
+  left: 48%;
+  top: 57px;
+  width: 14px;
+  height: 8px;
+  pointer-events: none;
+  z-index: 999;
+  display: block;
+  background: url(../images/arrow_menu.png) 0 0 no-repeat;
+  opacity: .7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+/* First level sub-menu styles
+========================================================*/
+.sf-menu ul {
+  position: absolute;
+  background: #eae6e3;
+  z-index: 999;
+  top: 71px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0 11px;
+  text-align: center;
+}
+.sf-menu ul li {
+  position: relative;
+  display: block;
+  text-align: center;
+  float: none !important;
+  padding: 0;
+  cursor: default;
+  border: none;
+}
+.sf-menu ul li a {
+  position: relative;
+  text-transform: uppercase;
+  z-index: 999;
+  display: block;
+  color: #dc5e61;
+  font: 400 14px/24px 'Roboto', sans-serif;
+  text-decoration: none;
+  letter-spacing: 1.3px;
+}
+.sf-menu ul li a:hover {
+  color: #ffffff;
+  background: #dc5e61;
+}
+.sf-menu > li > ul > li > a.sf-with-ul:after {
+  position: absolute;
+  content: '';
+  right: 20px;
+  width: 8px;
+  background: url(../images/arrow_menu.png) 0 0px no-repeat;
+  height: 5px;
+  top: 9px;
+  pointer-events: none;
+  z-index: 999;
+  display: block;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: .9;
+}
+/* Second level sub-menu styles
+========================================================*/
+.sf-menu ul ul {
+  position: absolute;
+  background: #ffffff;
+  left: 101%;
+  top: -10px;
+}
+.sf-menu ul ul li a {
+  color: #dc5e61;
+}
+.sf-menu ul ul li a:hover {
+  color: #ffffff;
+  background: #dc5e61;
+}
+/*========================================================
+                    RESPONSIVE
+=========================================================*/
+@media only screen and (max-width: 979px) {
+  nav {
+    height: 60px;
+  }
+  .sf-menu ul {
+    right: -150px;
+  }
+  .sf-menu ul ul {
+    top: 0!important;
+  }
+  .sf-menu li {
+    min-height: 60px;
+  }
+  .sf-menu > li > a {
+    letter-spacing: 0;
+    font-size: 13px;
+    line-height: 60px;
+  }
+  .sf-menu li ul {
+    top: 61px;
+  }
+  .sf-menu li ul li {
+    height: 24px;
+    min-height: 30px;
+  }
+  .sf-menu > li > a.sf-with-ul:after {
+    top: 50px;
+  }
+  .sf-menu > li > ul > li > a.sf-with-ul:after {
+    right: 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  nav {
+    height: 90px;
+  }
+  .sf-menu {
+    display: none;
+  }
+  .select-menu {
+    background: #ffffff;
+    border: 1px solid #df797b;
+    color: #2e3e4b;
+    display: block;
+    height: 28px;
+    margin: 30px 0;
+    padding: 4px 3px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}

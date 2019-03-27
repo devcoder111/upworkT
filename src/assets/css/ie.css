@@ -1,0 +1,26 @@
+
+
+.bq span,
+.circle,
+/*.list li  { behavior:url(js/PIE.htc); }*/
+
+#toTop { 
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+}
+
+
+.list li {
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.capture h5 {letter-spacing: 0;}
+
+
+
+/* Contact Form Processing Box
+========================================================*/
+
+#contact-form .contact-form-loader { display: none;}
+#contact-form.processing .contact-form-loader {display: block;}
